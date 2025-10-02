@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+.font-primary {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.bg-primary {
+  background-color: #126f77;
+}
+.tab-button {
+  color: #666;
+  /* background-color: #f2f2f2;  */
+  padding: 8px;
+  border-radius: 50px;
+  flex: 1;
+  margin: 4px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.tab-button:hover {
+  background-color: #126f77;
+  color: white;
+}
+
+.tab-button.active {
+  background-color: #126f77;
+  color: white;
+}
