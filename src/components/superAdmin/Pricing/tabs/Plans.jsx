@@ -2,8 +2,19 @@ import React, { useState } from "react";
 import Delete from "../../../../assets/icons/Super_Admin_delete.svg";
 import Edit from "../../../../assets/icons/Super_Admin_Edit.svg";
 import Left_Icon from "../../../../assets/icons/Super_Admin_PlanTab_Left_Icon.svg";
-import { div } from "framer-motion/client";
+import Plus_Icon from "../../../../assets/icons/Plus_Icon_Super_Admin.svg";
+import Minus_Icon from "../../../../assets/icons/Minus_Icon_Super_Admin.svg";
+
 export default function Plans() {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleDecrease = () => {
+    if (quantity > 1) setQuantity(quantity - 1);
+  };
+
+  const handleIncrease = () => {
+    setQuantity(quantity + 1);
+  };
   const [selectedPlan, setSelectedPlan] = useState("Basic");
 
   const [numUsers, setNumUsers] = useState(50);
@@ -158,7 +169,8 @@ export default function Plans() {
           </div>
         </div>
         {/* ---------------------------------------------------------------------------------------------3 Card*/}
-        <div className="bg-[#FFFFFF] rounded-xl text-[#1E293B]  w-[350px] h-[640px] p-6">
+        <div className="bg-[#FFFFFF] rounded-xl text-[#1E293B] p-6">
+          {/* w-[350px] h-[640px] */}
           <h2 className="text-lg font-bold">Pricing Calculator</h2>
           <div className="mt-6">
             <span className="text-lg font-medium">Select Plan</span>
@@ -179,7 +191,7 @@ export default function Plans() {
             </select>
           </div>
           <div className="mb-6">
-            <label className="block text-lg font-medium mt-2">
+            <label className="block text-lg font-bold mt-2">
               Number of Users
             </label>
             <input
@@ -190,6 +202,53 @@ export default function Plans() {
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
               placeholder="Enter number of users"
             />
+          </div>
+          <div className="border border-[#F2F2F2] mt-12"></div>
+          <div className="font-bold text-lg mt-6">
+            Available Add-ons
+            <div className="border border-[#f2f2f2] mt-4 p-4 rounded-lg">
+              Quantity Based Add-ons
+              <div className="border border-[#F2F2F2] rounded-sm mt-4 p-4">
+                <div className="flex flex-col justify-between gap-4">
+                  <div className="flex flex-row justify-around gap-2">
+                    <h2 className="font-semibold text-base">Sub-Admin</h2>
+                    <span className="inline-flex flex-row justify-between items-center gap-2 text-[#6B7280] font-semibold text-sm">
+                      <h2 className="text-lg font-bold text-[#1E293B]">₹300</h2>
+                      /Per Sub-Admin
+                    </span>
+                  </div>
+                  <span className="text-sm text-[#6B7280] font-semibold pl-11">
+                    Additional storage space for
+                    <br /> documents and media files
+                  </span>
+                  <div className="inline-flex flex-row gap-2 items-center font-medium justify-center">
+                    Quantity
+                    <button className="border-2 border-[#f2f2f2] p-1 rounded-sm">
+                      <img
+                        src={Minus_Icon}
+                        alt="Plus_Icon"
+                        className="w-4 h-4"
+                        onClick={handleDecrease}
+                      />
+                    </button>
+                    <p className="border border-[#f2f2f2] rounded-sm px-4">
+                      {quantity}
+                    </p>
+                    <button className="border-2 border-[#f2f2f2] p-1 rounded-sm">
+                      <img
+                        src={Plus_Icon}
+                        alt="Plus_Icon"
+                        className="w-4 h-4"
+                        onClick={handleIncrease}
+                      />
+                    </button>
+                    <h1 className="text-[#1D4ED8] bg-[#E6F3FF] rounded-sm px-4 py-1">
+                      Users
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

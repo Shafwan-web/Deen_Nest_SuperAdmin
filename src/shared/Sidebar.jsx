@@ -57,55 +57,6 @@ const menuItems = [
     iconActive: Setting_Icon,
     path: "/superadmin/setting",
   },
-
-  // {
-  //   name: "Subjects",
-  //   iconDefault: blackDashboardIcon,
-  //   iconActive: whiteDashboardIcon,
-  //   path: "/subjects",
-  // },
-  // {
-  //   name: "Donors",
-  //   iconDefault: blackDashboardIcon,
-  //   iconActive: whiteDashboardIcon,
-  //   path: "/donors",
-  // },
-  // {
-  //   name: "Configuration",
-  //   iconDefault: blackDashboardIcon,
-  //   iconActive: whiteDashboardIcon,
-  //   path: "/configuration",
-  // },
-  // {
-  //   name: "Fees Management",
-  //   iconDefault: blackDashboardIcon,
-  //   iconActive: whiteDashboardIcon,
-  //   path: "/fees-management",
-  // },
-  // {
-  //   name: "Review Management",
-  //   iconDefault: blackDashboardIcon,
-  //   iconActive: whiteDashboardIcon,
-  //   path: "/review-management",
-  // },
-  // {
-  //   name: "Notice Management",
-  //   iconDefault: blackDashboardIcon,
-  //   iconActive: whiteDashboardIcon,
-  //   path: "/notice-management",
-  // },
-  // {
-  //   name: "Payroll Management",
-  //   iconDefault: blackDashboardIcon,
-  //   iconActive: whiteDashboardIcon,
-  //   path: "/payroll-management",
-  // },
-  // {
-  //   name: "Attendance Management",
-  //   iconDefault: blackDashboardIcon,
-  //   iconActive: whiteDashboardIcon,
-  //   path: "/attendance-management",
-  // },
 ];
 
 const Sidebar = () => {

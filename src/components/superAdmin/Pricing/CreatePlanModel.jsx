@@ -254,7 +254,7 @@ const CreatePlanModel = ({ onClose }) => {
             <div className="mt-6">
               <h2 className="font-bold text-base mb-6">Features</h2>
               <span
-                className="text-[#16A34A] text-base p-4 font-bold rounded-md"
+                className="text-[#16A34A] text-base p-2 font-bold rounded-md"
                 style={{ backgroundColor: "#E9FDF0" }}
               >
                 Core
@@ -273,7 +273,7 @@ const CreatePlanModel = ({ onClose }) => {
               </div>
               <div className="mt-8">
                 <span
-                  className="text-[#1D4ED8] text-base p-4 font-bold rounded-md"
+                  className="text-[#1D4ED8] text-base p-2 font-bold rounded-md"
                   style={{ backgroundColor: "#E6F3FF" }}
                 >
                   Management
@@ -301,7 +301,7 @@ const CreatePlanModel = ({ onClose }) => {
               </div>
               <div className="mt-8">
                 <span
-                  className="text-[#F59E0B] text-base p-4 font-bold rounded-md"
+                  className="text-[#F59E0B] text-base p-2 font-bold rounded-md"
                   style={{ backgroundColor: "#FFF9E6" }}
                 >
                   Analytics
@@ -329,7 +329,7 @@ const CreatePlanModel = ({ onClose }) => {
               </div>
               <div className="mt-8">
                 <span
-                  className="text-[#7B1EB2] text-base p-4 font-bold rounded-md"
+                  className="text-[#7B1EB2] text-base p-2 font-bold rounded-md"
                   style={{ backgroundColor: "#F3E8FF" }}
                 >
                   Communication
@@ -353,7 +353,7 @@ const CreatePlanModel = ({ onClose }) => {
               </div>
               <div className="mt-8">
                 <span
-                  className="text-[#AE4200] text-base p-4 font-bold rounded-md"
+                  className="text-[#AE4200] text-base p-2 font-bold rounded-md"
                   style={{ backgroundColor: "#FFEDD4" }}
                 >
                   Storage
@@ -371,7 +371,7 @@ const CreatePlanModel = ({ onClose }) => {
               </div>{" "}
               <div className="mt-8">
                 <span
-                  className="text-[#A60F62] text-base p-4 font-bold rounded-md"
+                  className="text-[#A60F62] text-base p-2 font-bold rounded-md"
                   style={{ backgroundColor: "#FCE7F3" }}
                 >
                   Support
@@ -456,7 +456,9 @@ const CreatePlanModel = ({ onClose }) => {
                 <button className="bg-[#DFE5EF] text-[#6B7280] px-4 py-2 rounded-sm">
                   Cancel
                 </button>
-                <button className="bg-primary px-4 py-2 text-white rounded-sm">Create Plan</button>
+                <button className="bg-primary px-4 py-2 text-white rounded-sm">
+                  Create Plan
+                </button>
               </div>
             </div>
           </form>
