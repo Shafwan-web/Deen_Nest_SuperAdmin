@@ -5,11 +5,16 @@ import Green_Icon from "../../assets/icons/Vector_Green_Icon.svg";
 import Blue_Icon from "../../assets/icons/Vector_Blue_Icon.svg";
 import Red_Icon from "../../assets/icons/Vector_Red_Icon.svg";
 import Yellow_Icon from "../../assets/icons/Vector_Yellow_Icon.svg";
-import { tr } from "framer-motion/client";
 import CreatePlanModel from "../../components/superAdmin/Pricing/CreatePlanModel";
+import CreateFeatureModel from "../../components/superAdmin/Pricing/CreateFeatureModel";
 // import { Link } from "react-router-dom";
 const SuperAdminPricingPage = () => {
+  // Popup hatu che  4 che e
+
   const [planOpen, setPlanOpen] = useState(false);
+  const [featureOpen, setFeatureOpen] = useState(false); // ⭐ Added for Create Feature
+  const [couponOpen, setCouponOpen] = useState(false); // ⭐ Added for Create Coupon
+  const [addonOpen, setAddonOpen] = useState(false); // ⭐ Added for Create Addon
 
   const handleOpenPlan = () => {
     setPlanOpen(true);
@@ -18,6 +23,12 @@ const SuperAdminPricingPage = () => {
   const handleCloseOpen = () => {
     setPlanOpen(false);
   };
+  const [modalOpen, setModalOpen] = useState("");
+  const handleOpenModal = (type) => setModalOpen(type);
+  const handleCloseModal = () => setModalOpen("");
+  // const [changebtn, setChangeBtn] = useState("plan");
+  const [activeTab, setActiveTab] = useState("plans");
+
   const Price_State_data = [
     {
       icon: Green_Icon,
@@ -54,14 +65,74 @@ const SuperAdminPricingPage = () => {
         <h1 className="font-primary font-bold text-2xl text-[#1E293B]">
           Pricing & Promotions
         </h1>
-        <button className="inline-flex justify-center items-center bg-primary gap-2 p-2 rounded-sm text-white">
+        {/* <button className="inline-flex justify-center items-center bg-primary gap-2 p-2 rounded-sm text-white">
           <img src={Plus} alt="Plus_Icon" className="w-3 h-3" />
           <span
             className="font-primary font-semibold text-base cursor-pointer"
             onClick={handleOpenPlan}
+          > */}
+        {/* <Link to="/create-plan">Create Plan</Link>  working this Link Ok. */}
+        {/* Create Plan
+          </span>
+        </button> */}
+
+        {/* {activeTab === "plan" && (
+          <button
+            className="inline-flex justify-center items-center bg-primary gap-2 p-2 rounded-sm text-white"
+            onClick={handleOpenPlan}
           >
-            {/* <Link to="/create-plan">Create Plan</Link>  working this Link Ok. */}
-            Create Plan
+            <img src={Plus} alt="Plus_Icon" className="w-3 h-3" />
+            <span className="font-primary font-semibold text-base cursor-pointer">
+              Create Plan
+            </span>
+          </button>
+        )}
+
+        {activeTab === "feature" && (
+          <button
+            className="inline-flex justify-center items-center bg-primary gap-2 p-2 rounded-sm text-white"
+            onClick={handleOpenFeature}
+          >
+            <img src={Plus} alt="Plus_Icon" className="w-3 h-3" />
+            <span className="font-primary font-semibold text-base cursor-pointer">
+              Create Feature
+            </span>
+          </button>
+        )}
+
+        {activeTab === "coupon" && (
+          <button
+            className="inline-flex justify-center items-center bg-primary gap-2 p-2 rounded-sm text-white"
+            onClick={handleOpenCoupon}
+          >
+            <img src={Plus} alt="Plus_Icon" className="w-3 h-3" />
+            <span className="font-primary font-semibold text-base cursor-pointer">
+              Create Coupon
+            </span>
+          </button>
+        )}
+
+        {activeTab === "addon" && (
+          <button
+            className="inline-flex justify-center items-center bg-primary gap-2 p-2 rounded-sm text-white"
+            onClick={handleOpenAddon}
+          >
+            <img src={Plus} alt="Plus_Icon" className="w-3 h-3" />
+            <span className="font-primary font-semibold text-base cursor-pointer">
+              Create Addon
+            </span>
+          </button>
+        )} */}
+        <button
+          className="inline-flex justify-center items-center bg-primary gap-2 p-2 rounded-sm text-white font-semibold text-base cursor-pointer"
+          onClick={() => handleOpenModal(activeTab)}
+        >
+          <img src={Plus} alt="Plus_Icon" className="w-3 h-3" />
+          <span>
+            {activeTab === "plans" && "Create Plan"}
+            {activeTab === "features" && "Create Feature"}
+            {activeTab === "addons" && "Create Addon"}
+            {activeTab === "coupons" && "Create Coupon"}
           </span>
         </button>
       </div>
@@ -91,8 +162,17 @@ const SuperAdminPricingPage = () => {
       </div>
       <div></div>
 
-      <PricingTabs />
-      {planOpen && <CreatePlanModel onClose={handleCloseOpen} />}
+      <PricingTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      {/* {planOpen && <CreatePlanModel onClose={handleCloseOpen} />} */}
+      {modalOpen === "plans" && <CreatePlanModel onClose={handleCloseModal} />}
+      {modalOpen === "features" && (
+        <CreateFeatureModel onClose={handleCloseModal} />
+      )}
+      {/*
+      {modalOpen === "addon" && <CreateAddonModel onClose={handleCloseModal} />}
+      {modalOpen === "coupon" && (
+        <CreateCouponModel onClose={handleCloseModal} />
+      )} */}
     </div>
   );
 };

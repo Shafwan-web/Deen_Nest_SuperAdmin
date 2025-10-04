@@ -19,7 +19,7 @@ const menuItems = [
     name: "Dashboard",
     iconDefault: blackDashboardIcon,
     iconActive: whiteDashboardIcon,
-    path: "/superadmin/dashboard",
+    path: "/",
   },
   {
     name: "Customer",

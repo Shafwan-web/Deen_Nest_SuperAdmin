@@ -4,8 +4,8 @@ import Features from "./tabs/Features";
 import Addons from "./tabs/Addons";
 import Coupons from "./tabs/Coupons";
 
-export default function PricingTabs() {
-  const [activeTab, setActiveTab] = useState("plans");
+export default function PricingTabs({ activeTab, setActiveTab }) {
+  // const [activeTab, setActiveTab] = useState("plans");
   const RenderTab = () => {
     switch (activeTab) {
       case "plans":

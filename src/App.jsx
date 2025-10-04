@@ -19,10 +19,7 @@ const App = () => {
           <Navbar />
           <main className="flex-1 overflow-y-auto p-4 no-scrollbar">
             <Routes>
-              <Route
-                path="/superadmin/dashboard"
-                element={<SuperAdminDashboardPage />}
-              />
+              <Route path="/" element={<SuperAdminDashboardPage />} />
               <Route
                 path="/superadmin/customer"
                 element={<SuperAdminCustomer />}

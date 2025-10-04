@@ -147,11 +147,11 @@ const CreatePlanModel = ({ onClose }) => {
         <div
           className="absolute inset-0 bg-black opacity-50"
           style={{ zIndex: 40 }}
-          onClick={onClose}
+          // onClick={onClose}
         ></div>
         {/* Modal with higher z-index and StudentForm-like styling */}
         <div
-          className="bg-[#FFFFFF] border border-[#FFFFFF]
+          className="bg-[#FFFFFF] border border-[#E9EDF6]
            rounded-md p-4 w-[700px] max-h-[90vh] overflow-y-auto shadow-lg relative"
           style={{ zIndex: 50 }}
         >
@@ -163,7 +163,7 @@ const CreatePlanModel = ({ onClose }) => {
               </h2>
               <button
                 onClick={onClose}
-                className="text-gray-500 hover:text-black text-lg"
+                className="text-gray-500 hover:text-black text-lg cursor-pointer"
               >
                 <img src={Close_Icon} alt="Close_Icon" />
               </button>
