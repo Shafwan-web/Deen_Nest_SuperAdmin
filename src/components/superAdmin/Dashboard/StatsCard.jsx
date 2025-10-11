@@ -3,7 +3,7 @@ function StatsCard({
   value,
   subtitle,
   icon,
-  color = "bg-blue-100",
+  color = "bg-blue-100" ,
   iconColor = "text-blue-600",
 }) {
   return (

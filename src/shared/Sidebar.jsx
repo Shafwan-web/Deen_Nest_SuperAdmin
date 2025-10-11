@@ -57,10 +57,20 @@ const menuItems = [
     iconActive: Setting_Icon,
     path: "/superadmin/setting",
   },
+  {
+    name: "Notification",
+    iconDefault: Setting_Icon,
+    iconActive: Setting_Icon,
+    path: "/superadmin/notification",
+  },
 ];
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleCloseup = () => {
+    setIsOpen(false);
+  };
   return (
     <>
       {/* Toggle button (only on mobile/tablet) */}
@@ -113,6 +123,7 @@ const Sidebar = () => {
                       : "hover:bg-gray-100 text-[#1E293B] "
                   }`
                 }
+                onClick={handleCloseup}
               >
                 {({ isActive }) => (
                   <>

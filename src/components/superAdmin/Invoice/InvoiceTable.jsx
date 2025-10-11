@@ -76,7 +76,7 @@ export default function InvoiceTable() {
   return (
     <div>
       <div className="bg-[#FFFFFF] p-2 md:p-4 mt-6 rounded-lg border border-[#F2F2F2] ">
-        <div className="flex flex-row justify-between items-center gap-4 sm:flex-col sm:items-start md:flex-row md:items-center">
+        <div className="flex flex-row justify-between items-center gap-4 sm:items-start md:flex-row md:items-center">
           <div>
             <h1 className="text-[#1E293B] font-bold font-primary text-base">
               Invoices
@@ -96,7 +96,7 @@ export default function InvoiceTable() {
         </div>
         <div className="border border-[#F2F2F2] mt-6 w-full"></div>
         <div className="overflow-x-auto">
-          <table className="w-full mt-4 min-w-[1100px] custom-scrollbar">
+          <table className="w-full mt-4 min-w-[1100px]">
             <thead>
               <tr className="text-left text-[#126F77] text-sm font-primary font-bold">
                 <th className="py-2 px-4">Invoice ID</th>

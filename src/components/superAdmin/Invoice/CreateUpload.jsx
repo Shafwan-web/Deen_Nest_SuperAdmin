@@ -24,7 +24,10 @@ export default function CreateUpload({ onClose }) {
   return (
     <div>
       <div className="font-primary text-[#1E293B] w-[100%]">
-        <div className="fixed inset-0 flex items-center justify-center z-50">
+        <div
+          className="fixed inset-0 flex items-center justify-center z-50"
+          onClick={onClose}
+        >
           <div
             className="absolute inset-0 bg-black opacity-50"
             style={{ zIndex: 40 }}
@@ -33,6 +36,7 @@ export default function CreateUpload({ onClose }) {
             className="bg-[#FFFFFF] border border-[#E9EDF6]
                 rounded-md w-[700px] max-h-[90vh] overflow-y-auto shadow-lg relative m-4"
             style={{ zIndex: 50 }}
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
             <div className="relative">

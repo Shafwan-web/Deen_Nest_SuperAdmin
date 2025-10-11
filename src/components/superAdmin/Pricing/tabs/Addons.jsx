@@ -7,6 +7,13 @@ import Edit from "../../../../assets/icons/Edit_Feature_Super_Admin.svg";
 import Toggle_Icon from "../../../../assets/icons/Toggle_Super_Admin.svg";
 
 export default function Addons() {
+  // All in one Card
+  const [toggles, setToggles] = useState({
+    storage: [false, false, false],
+    support: [false, false],
+    users: [false, false],
+  });
+  //----------------------------------------------
   ///Storage Add-ons
   const [ison, setIson] = useState(false);
   const [ison1, setIson1] = useState(false);
@@ -315,7 +322,7 @@ export default function Addons() {
           </div>
           <div className="flex flex-col justify-start">
             <h1 className="text-[#1E293B] font-semibold text-base">
-              Storage Add-on
+              Support Add-on
             </h1>
             <p className="text-[#6B7280] font-medium text-sm">
               2 add-oms Available
@@ -437,7 +444,7 @@ export default function Addons() {
           </div>
           <div className="flex flex-col justify-start">
             <h1 className="text-[#1E293B] font-semibold text-base">
-         Users Add-Ons
+              Users Add-Ons
             </h1>
             <p className="text-[#6B7280] font-medium text-sm">
               2 add-oms Available

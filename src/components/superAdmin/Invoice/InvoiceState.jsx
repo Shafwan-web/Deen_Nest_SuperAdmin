@@ -36,22 +36,26 @@ export default function InvoiceState() {
   ];
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 font-primary">
+      <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 mt-4 font-primary">
         {Invoice_data.map((value, index) => {
           return (
             <div className="bg-[#fff] rounded-sm" key={index}>
               <div className="flex flex-row gap-4 items-center p-4">
                 <div
-                  className="w-13 h-13 p-2 rounded-sm flex justify-center items-center"
+                  className="w-8 h-8 md:w-10 md:h-10 p-2 rounded-sm flex justify-center items-center"
                   style={{ backgroundColor: `${value.backColor}` }}
                 >
-                  <img src={value.icon} alt="Vector_Icon" className="w-7 h-7" />
+                  <img
+                    src={value.icon}
+                    alt="Vector_Icon"
+                    className="w-4 h-4 md:w-6 md:h-6"
+                  />
                 </div>
-                <div className="inline-flex flex-col gap-1">
-                  <p className="text-[#6B7280] font-semibold text-base">
+                <div className="inline-flex flex-col lg:gap-1">
+                  <p className="text-[#6B7280] font-semibold text-xs md:text-sm lg:text-base">
                     {value.Title}
                   </p>
-                  <h1 className="text-[#1E293B] font-bold text-lg">
+                  <h1 className="text-[#1E293B] font-bold text-sm md:text-lg">
                     {value.Head}
                   </h1>
                 </div>

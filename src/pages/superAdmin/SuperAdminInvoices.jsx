@@ -23,7 +23,7 @@ const SuperAdminInvoices = () => {
         </div>
         <div>
           <button
-            className="flex flex-row gap-4 bg-primary justify-center items-center rounded-sm px-1 md:px-3 py-2 
+            className="flex flex-row gap-1 bg-primary justify-center items-center rounded-sm px-1 md:px-3 py-2 
           cursor-pointer hover:scale-105 duration-300 hover:text-base"
             onClick={handleOpenup}
           >

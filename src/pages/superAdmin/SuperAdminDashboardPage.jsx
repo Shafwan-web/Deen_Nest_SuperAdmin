@@ -4,6 +4,10 @@ import SubscriptionGrowth from "../../components/superAdmin/Dashboard/Subscripti
 import RevenueTrends from "../../components/superAdmin/Dashboard/RevenueTrends";
 import PlanDistribution from "../../components/superAdmin/Dashboard/PlanDistribution";
 import RecentActivities from "../../components/superAdmin/Dashboard/RecentActivities";
+import Blue_Icon from "../../assets/icons/Vector_Blue_Icon.svg";
+import Red_Icon from "../../assets/icons/Vector_Red_Icon.svg";
+import Green_Icon from "../../assets/icons/Vector_Green_Icon.svg";
+import Yellow_Icon from "../../assets/icons/Vector_Yellow_Icon.svg";
 
 const SuperAdminDashboardPage = () => {
   return (
@@ -18,28 +22,28 @@ const SuperAdminDashboardPage = () => {
             <StatsCard
               title="Total Madrasa"
               value="12"
-              icon="/imgsa-1.svg"
+              icon={Blue_Icon}
               subtitle="Registered institutions"
               color="bg-blue-100"
             />
             <StatsCard
               title="Active Madrasa"
               value="2"
-              icon="/imgsa-2.svg"
+              icon={Red_Icon}
               subtitle="Currently subscribed"
               color="bg-red-100"
             />
             <StatsCard
               title="Expiring Soon"
               value="1"
-              icon="/imgsa-3.svg"
+              icon={Green_Icon}
               subtitle="Need renewal"
               color="bg-green-100"
             />
             <StatsCard
               title="Expired"
               value="2"
-              icon="/imgsa-4.svg"
+              icon={Yellow_Icon}
               subtitle="Across all madrasas"
               color="bg-yellow-100"
             />
