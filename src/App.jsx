@@ -11,6 +11,7 @@ import SuperAdminInvoices from "./pages/superAdmin/SuperAdminInvoices.jsx";
 import SuperAdminSettingPage from "./pages/superAdmin/SuperAdminSettingPage.jsx";
 import CreatePlanModel from "../src/components/superAdmin/Pricing/CreatePlanModel.jsx";
 import SuperAdminNotificationPage from "./pages/superAdmin/SuperAdminNotificationPage.jsx";
+import SuperAdminAttendancePage from "./pages/SuperAdminAttendancePage.jsx";
 const App = () => {
   return (
     <>
@@ -49,6 +50,11 @@ const App = () => {
                 path="/superadmin/notification"
                 element={<SuperAdminNotificationPage />}
               />
+              <Route
+                path="/superadmin/attendance"
+                element={<SuperAdminAttendancePage />}
+              />
+
               <Route path="/create-plan" element={<CreatePlanModel />} />
             </Routes>
           </main>

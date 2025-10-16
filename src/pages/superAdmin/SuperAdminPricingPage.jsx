@@ -13,8 +13,8 @@ const SuperAdminPricingPage = () => {
 
   const [planOpen, setPlanOpen] = useState(false);
   const [featureOpen, setFeatureOpen] = useState(false); // ⭐ Added for Create Feature
-  const [couponOpen, setCouponOpen] = useState(false); // ⭐ Added for Create Coupon
-  const [addonOpen, setAddonOpen] = useState(false); // ⭐ Added for Create Addon
+  const [couponOpen, setCouponOpen] = useState(false); // ⭐  for Create Coupon
+  const [addonOpen, setAddonOpen] = useState(false); // ⭐ AAddeddded for Create Addon
 
   const handleOpenPlan = () => {
     setPlanOpen(true);

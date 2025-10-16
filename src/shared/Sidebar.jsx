@@ -10,6 +10,7 @@ import Price_Icon from "../assets/icons/Pricing_Icon.svg";
 import Renewal_Icon from "../assets/icons/Renewals_Icon.svg";
 import Invoice_Icon from "../assets/icons/Invoice_Icon.svg";
 import Setting_Icon from "../assets/icons/Setting_Icon.svg";
+import Attendance_Icon from "../assets/icons/Attendance_Icon.svg";
 
 import { Menu, X } from "lucide-react";
 
@@ -62,6 +63,12 @@ const menuItems = [
     iconDefault: Setting_Icon,
     iconActive: Setting_Icon,
     path: "/superadmin/notification",
+  },
+  {
+    name: "Attendance",
+    iconDefault: Attendance_Icon,
+    iconActive: Attendance_Icon,
+    path: "/superadmin/attendance",
   },
 ];
 
