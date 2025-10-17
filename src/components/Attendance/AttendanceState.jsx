@@ -1,9 +1,8 @@
 import React from "react";
-import Attendance_Icon from "../../assets/icons/AvgAttendance_Icon.svg";
+import Attendance_Icon from "../../assets/icons/Icons_Attendance_2.svg";
 import AnnualFee from "../../assets/icons/AnnualFee_Icon.svg";
 import PaidFee from "../../assets/icons/PaidFee_Icon.svg";
 import PendingFee from "../../assets/icons/PendingFee_Icon.svg";
-import { div, head } from "framer-motion/client";
 export default function AttendanceState() {
   const attendanceData = [
     {
@@ -41,22 +40,29 @@ export default function AttendanceState() {
         {attendanceData.map((item, i) => {
           return (
             <div key={i} className="bg-white p-4 rounded-lg">
-              <div className="flex flex-col gap-2">
-                <div>
-                  <p className="text-[#6B7280] text-sm font-semibold">
-                    {item.title}
-                  </p>
+              <div className="flex flex-row gap-4 justify-between items-center">
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <p className="text-[#6B7280] text-base font-semibold">
+                      {item.title}
+                    </p>
+                  </div>
+                  <div>
+                    <h1
+                      className="font-bold text-lg"
+                      style={{ color: `${item.headColor}` }}
+                    >
+                      {item.head}
+                    </h1>
+                  </div>
                 </div>
-                <div>
-                  <h1
-                    className="font-bold text-lg"
-                    style={{ color: `${item.headColor}` }}
-                  >
-                    {item.head}
-                  </h1>
+                <div
+                  className="p-4 rounded-lg"
+                  style={{ backgroundColor: `${item.iconColor}` }}
+                >
+                  <img src={item.icon} alt="Icon image" />
                 </div>
               </div>
-              <div></div>
             </div>
           );
         })}
